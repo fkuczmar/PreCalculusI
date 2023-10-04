@@ -1,0 +1,684 @@
+\documentclass{ximera}
+\title{Circles}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Circles in the Euclidean plane.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+\section{Circle Fundamentals}
+
+The most important thing to know about the equation of a circle is the logic behind it. If you understand this logic, there is no need to memorize the equation. Instead, you can figure it out yourself.
+
+The logic starts with the idea that a circle is the set of all points in a plane that are a fixed distance from a given point. The given point is the \emph{center} of the circle and the fixed distance is the \emph{radius}. Any segment from the center to a point on the circle is also called a radius. The context should make it clear which meaning applies.
+
+
+
+
+\begin{example} \label{Ex1}
+Use the Pythagorean Theorem to determine if the point $P(10,5)$ lies inside, outside, or on the circle with center $A(2,1)$ and radius $9$. 
+\end{example}
+
+\begin{explanation}
+The circle is the set of points exactly 9 units from the center $A(2,1)$. The point $P$ will lie inside, outside, or on the circle if the distance between $A$ and $P$ is respectively less than, equal to, or greater than the radius.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zaxdqc67p4}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+To determine the distance between $A$ and $P$, we use the Pythagorean theorem by drawing a right triangle $\Delta ABP$ with hypotenuse $AP$ and legs parallel to the coordinate axes as in the figure above. The point $B$ has coordinates $(10,1)$, taken from the $x$-coordinate of $P$ (ie. $x=10$) and the $y$-coordinate of $A$ (ie. $y=1$). Then by the Pythagorean Theorem, the distance between $A$ and $P$ is
+\[
+   \text{dist}(A,P) = \sqrt{AB^2 + BP^2} = \sqrt{(10-2)^2 + (5-1)^2} = \sqrt{8^2 + 4^2} = \sqrt{80} . 
+\]
+Since this distance is less than the radius of the circle $9 = \sqrt{81}$, the point $P$ lies \emph{inside} the circle.
+
+\iffalse   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+\centerline{
+\includegraphics[height=2 in]{Circle1.eps}   
+}
+%\caption{The graph of the function $y=f(x)$.}\label{Fi:Shadow}
+\end{figure}
+
+\fi   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{explanation}
+
+
+\begin{example} \label{Ex2}
+Find an equation of the circle with center $A(2,1)$ and radius $9$. Explain your reasoning. Be sure to include an accurate picture.
+\end{example}
+
+\begin{explanation}
+The idea is to turn the geometric description of the circle, namely the set of all points in the plane exactly 9 units from the point $A$, into an equation. Take a general point $P$ with coordinates $(x,y)$. Then this point $P$ lies on the circle if and only if
+\[
+     \text{dist}(A,P) = 9 .
+\]
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{k8ulcm8jjx}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+We can use the Pythagorean Theorem to compute the distance between the center $A(2,1)$ and the general point $P(x,y)$ as 
+\[
+ \text{dist}(A,P) =  \sqrt{(x-2)^2 + (y-1)^2} .
+\]
+So the point $P(x,y)$ lies on the circle with center $A(1,2)$ and radius $9$ exaclty when (ie. if and only if)
+\[
+     \sqrt{(x-2)^2 + (y-1)^2} = 9 .
+\]
+This is an equation of the circle with center $A(1,2)$ and radius $9$. 
+
+\pskip
+
+{\bf Remark:}  There is no need to square both sides in the above equation. In fact, writing the equation as
+\[
+      (x-2)^2 + (y-1)^2 = 81
+\]
+obscures the idea of a circle and turns a statement about distances into one about areas.
+
+
+\iffalse   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+\centerline{
+\includegraphics[height=2 in]{Circle1B.eps}   
+}
+%\caption{The graph of the function $y=f(x)$.}\label{Fi:Shadow}
+\end{figure}
+
+\fi          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{explanation}
+
+
+\begin{example}   \label{Ex3}
+Find the coordinates of the $x$-intercepts of the circle with center $A(2,1)$ and radius $9$. %Explain your reasoning. Be sure to include an accurate picture.
+\end{example}
+
+\pskip
+
+\begin{explanation}
+\begin{onlineOnly}
+    \begin{center}
+\desmos{z1wzstensv}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+A point lines on the $x$-axis when its $y$-coordinate is zero. So we can find the $x$-coordinates of the intercepts by substituting $y=0$ into the equation
+\[
+\sqrt{(x-2)^2 + (y-1)^2} = 9 
+\]
+of the circle and solving for $x$. So if $y=0$, then
+\[
+\sqrt{(x-2)^2 + (0-1)^2} = 9,
+\]
+and
+\[
+   (x-2)^2 + 1 = 81,
+\]
+and
+\[
+   (x-2)^2 = 80.
+\]
+So
+\[
+    x-2 = \pm \sqrt{80}
+\]
+and 
+\[
+  x = 2\pm \sqrt{80} .
+\]
+
+The $x$-intercepts of the circle with center $A(1,2)$ and radius $9$ have coordinates $(2\pm \sqrt{80}, 0)$, or approximately $(10.9,0)$ or $(-6.9,0)$.
+
+
+
+
+\iffalse   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+\centerline{
+\includegraphics[height=2.5 in]{Circle1C.eps}   
+}
+%\caption{The graph of the function $y=f(x)$.}\label{Fi:Shadow}
+\end{figure}
+
+\fi  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{explanation}
+
+
+\iffalse        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{example}  \label{Ex4}
+Find the coordinates of the points where the line $x=-5$ intersects the circle with center $A(2,1)$ passing through the point $Q(10,5)$. Explain your reasoning. Be sure to include an accurate picture.
+\end{example}
+
+\begin{explanation}
+The circle has radius
+\[
+   \text{dist}(A,Q) = \sqrt{(10-2)^2  + (5-1)^2} = \sqrt{80} .
+\]
+So the point $P(x,y)$ lies on the circle when
+\[
+  \text{dist}(A,P) = \sqrt{80}
+\]
+or when
+\[
+   \sqrt{(x-2)^2 +(y-1)^2} = \sqrt{80} .
+\]
+This is an equation of the circle with center $A(2,1)$ that passes though the point $Q(10,5)$.
+
+To find the coordinates of the points where this circle intersects the line $x=-5$, substitute $x=-5$ into the equation of the circle. Then 
+\[
+       (-5-2)^2 + (y-1)^2 = 80
+\]
+and
+\[ 
+     (y-1)^2 = 31 .
+\]
+So
+\[
+     y = 1 \pm \sqrt{31} .
+\]
+The points where the line $x=-5$ intersects the circle with center $A(2,1)$ that passes through the point $Q(10,5)$ have coordinates $(-5, 1\pm \sqrt{31})$, or approximately $(-5, 6.6)$ or $(-5,-4.6)$.
+
+
+\begin{figure}[!h]
+\centerline{
+\includegraphics[height=1.7 in]{Circle1D.eps}   
+}
+%\caption{The graph of the function $y=f(x)$.}\label{Fi:Shadow}
+\end{figure}
+
+
+\end{explanation}
+
+\fi          %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{example} \label{Ex4b}
+The circles with equations
+\[
+    x^2 + y^2 = 25
+\]
+and 
+\[
+   (x+6)^2 + (y-2)^2=13
+\]
+intersect in two points. Use algebra to find an equation of the line through these points.
+\end{example}
+
+\begin{explanation}
+
+There is a hard way and an easy way to solve this problem. Both methods start the same.
+
+We'll rewrite the equations as
+\begin{equation}
+  x^2 + y^2 - 25 = 0   \label{Eq:Circle1}
+\end{equation}
+and
+\begin{equation}
+  (x+6)^2 + (y-2)^2-13 = 0 .   \label{Eq:Circle2}
+\end{equation}
+The idea now is to use algebra to start to solve this system of equations by substituting the expression $x^2-y^2-25$ for the zero on the right side of the second equation to get
+\[
+        (x+6)^2 + (y-2)^2-13 = x^2 + y^2 -25 .
+\]
+Then some algebra leads to the equivalent equation
+\[
+   y-3x = 13.
+\]
+
+What this shows is that \emph{if} the point with coordinates $(x,y)$ lies on the circles defined by equations (\ref{Eq:Circle1}) and (\ref{Eq:Circle2}), then it also lies on the line $y-3x = 13$. Because there are two points of intersection and each of these points lies on this line, the line $y=3x=13$ is in fact the line through the points of intersection.
+
+That's it. We're done. There is no need to compute the coordinates of the intersection points. The desmos graph below suggests that we are correct.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{9v9d9fbwom}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+\begin{question}
+Use algebra to find the exact coordinates of the two intersection points. Then type these coordinates in Lines 4 and 5 of the above desmos activity to check if you are correct. 
+\end{question}
+
+\end{explanation}
+
+Next we'll generalize the previous problem.
+
+\begin{example} \label{Ex4c}
+Find an equation of the line through the points of intersection of the circles
+\[
+    x^2 + y^2 = r^2
+\]
+and 
+\[
+   (x-a)^2 + (y-b)^2=R^2.
+\]
+\end{example}
+
+\begin{explanation}
+I'll leave the algebra to you, but try mimicking the solution to the previous example. Then input your equation in Line 8 of the desmos activity below to check that you are correct.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{dvxcnu3opz}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\begin{question}
+Drag the center of the blue circle in the above demonstration to pull the circles apart so that they do not intersect. Something surprising happens. Describe this and try to explain why.
+\end{question}
+
+\end{explanation}
+
+
+
+\begin{example}  \label{Ex5}
+How many circles pass through the points $A(3,5)$ and $B(6,-2)$? What can you say about their centers?
+
+\begin{explanation}
+We have three degrees of freedom (ie. three choices) in drawing a circle - two in choosing the coordinates of its center and a third in choosing its radius. Since there are only two conditions, namely that our circle pass through the two given points, we would are left with one degree of freedom in choosing our circle. This suggests that there are infinitely many such circles. We'll explore this in the activity below. 
+
+
+\begin{exploration}\label{exp:circle1}
+Drag the centers of each of the circles below so that they pass through the points $A$ and $B$ if possible. What do you notice about the centers of these circles?
+ 
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/6lmpvfuqjk}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{6lmpvfuqjk}{900}{600}
+\end{center}
+\end{onlineOnly}
+\end{exploration}
+
+You should have noticed that the centers of circles through the points $A(3,5)$ and $B(6,-2)$ lie on a line. In fact, the centers are exactly the points on the perpendicular bisector of the segment $\overline{AB}$. The key to show why this is true is to realize that a point $P$ with coordinates $(x,y)$ is the center of a circle through $A$ and $B$ exactly when (ie. if and only if) $P$ is equidistant (ie. equally distant) from $A$ and $B$ (\emph{Why?}). 
+
+Now many of you already know that the set of points equidistant from $A$ and $B$ is the perpendicular bisector of the segment $\overline{AB}$ and we could use this to find an equation of the set of all such points. But this is primarily an algebra class, so we will not use this approach. Instead, we will translate the geometric condition that the center $P(x,y)$ be equidistant from $A(3,5)$ and $B(6,-2)$ into an equation.
+
+The point $P$ is the center of a circle through $A$ and $B$ if and only if the distances $\text{dist}(A,P)$ and $\text{dist}(B,P)$ are equal. That is, if and only if
+\[
+   \text{dist}(A,P)  = \text{dist}(B,P) .
+\]
+Now because
+\[
+   \text{dist}(A,P) = \sqrt{(x-3)^2 + (y-5)^2}
+\] 
+and
+\[
+  \text{dist}(B,P) = \sqrt{(x-6)^2 + (y+2)^2} ,
+\]
+the point $P$ is the center of a circle through $A$ and $B$ if and only if
+\[
+   \sqrt{(x-3)^2 + (y-5)^2} = \sqrt{(x-6)^2 + (y+2)^2} .
+\]
+
+Now this does not look at all like an equation of a line, but after doing some algebra we get the equivalent condition that
+\[
+      -6x -10y + 34 = -12x + 4y +40 ,
+\] 
+or that 
+\[
+    3x - 7y = 3 .
+\]
+ 
+Now type this equation in Line 24 of the above Desmos demonstration to make sure this is correct.
+
+\end{explanation}
+
+\pskip
+
+\begin{question} \label{Q1}
+(a) Work through the algebra that was omitted above.
+
+(b) Find an equation of the smallest circle through the points $A(3,5)$ and $B(6,-2)$. Explain your reasoning thoroughly.
+
+(c) Find an equation of another circle through the points $A(3,5)$ and $B(6,-2)$. Explain your reasoning thoroughly.
+\end{question}
+
+\end{example}
+
+\pskip
+
+\begin{example}  \label{Ex6}
+Find equations of all circles of radius 8 through the points $A(3,5)$ and $B(6,-2)$.
+
+
+\begin{explanation}
+The circle must satisfy three conditions, that it pass through the two points and have the given radius. Since we have three degrees of freedom in choosing a circle, we should expect there to be at most finitely many circles of radius 8 through the points $A(3,5)$ and $B(6,-2)$.
+
+The key is to find the centers of all such circles. Suppose the point $P$ with coordinates $(x,y)$ is one such center. We know $P$ lies on the line $3x-7y=3$. And since $P$ is 8 units from $A$, it also lies on the circle of radius $8$ centered at $A(3,5)$. So we can find the possible coordinates of $P$ by using algebra to find the coordinates of the points where the line and circle intersect.
+
+Carry out the above computation and input the coordinates $(x_1, y_1)$ and $(x_2,y_2)$ of the centers of the two circles of radius 8 through $A$ and $B$ below, with $x_1 < x_2$. 
+
+\begin{question} \label{Q2}
+\[
+  (x_1, y_1) = \answer{\left( \frac{3}{58}\left( 87-7\sqrt{319}\right), \frac{3}{58}\left( 29-3\sqrt{319}\right) \right)} 
+\]
+\[
+  (x_2, y_2) = \answer{\left( \frac{3}{58}\left( 87+7\sqrt{319}\right), \frac{3}{58}\left( 29+3\sqrt{319}\right) \right)} 
+\]
+\end{question}
+
+
+
+\begin{exploration}\label{exp:circle6}
+Write the equations of the circles with radius 8 through the points $A(3,5)$ and $B(6,-2)$ in Lines 13 and 14 of the Desmos graph below. Use the graphs to check that your equations are correct.
+ 
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/74vvgjwoqd}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{74vvgjwoqd}{900}{600}
+\end{center}
+\end{onlineOnly}
+\end{exploration}
+
+\end{explanation}
+
+\end{example}
+
+
+
+\begin{example}  \label{Ex7}
+Find an equation of the circle through the points $O(0,0)$, $A(a,0)$, and $B(b,c)$.
+\end{example}
+
+\begin{explanation}
+Since there are three conditions, that the circle pass through the given points, we should expect there to be at most finitely many such circles. 
+
+The key to solving this problem is to find the possible coordinates of the center $P(x,y)$. Since the circle passes through the points $O(0,0)$ and $A(a,0)$, its center is equidistant from these points and its coordinates $(x,y)$ must satisfy the equation
+\[
+    \sqrt{x^2 + y^2} = \sqrt{(x-a)^2+y^2} .
+\]
+After simplifying this equation, we find that the center $P$ lies on the line  
+\[
+   x = a/2.
+\]
+Similarly, since $P$ is equidistant from $O(0,0)$ and $B(b,c)$,
+\[
+  \sqrt{x^2 + y^2} = \sqrt{(x-b)^2+(y-c)^2} ,
+\]
+and so $P$ also lies on the line 
+\[
+  2bx + 2cy = b^2 + c^2 .
+\]
+The center therefore is the point where these two lines intersect and we can find its coordinates by substituting $x=a/2$ into the second equation. Carry out this algebra and input the coordinates $(x_1,y_1)$ of the center of the circle through the points $O(0,0)$, $A(a,0)$, and $B(b,c)$ below.
+
+\begin{question}
+\[
+  (x_1, y_1) = \answer{ \left( \frac{a}{2}  ,  \frac{b^2+c^2-ab}{2c}   \right)} 
+\]
+\end{question}
+
+%This gives
+%\[
+%        2b (a/2) + 2cy = b^2 + c^2
+%\]
+%and
+%\[
+%      y = \frac{b^2+c^2-ab}{2c} .
+%\]
+
+
+
+%So the center of the circle through the points $O(0,0)$, $A(a,0)$, and $B(b,c)$ has coordinates
+%\[
+%  (x_1, y_1) = \left(   \frac{a}{2}  ,  \frac{b^2+c^2-ab}{2c}    \right) .
+%\]
+
+\begin{exploration}\label{exp:circle7}
+You may have noticed that we did not think about whether there is always a {\bf unique} circle through the points $O(0,0)$, $A(a,0)$, and $B(b,c)$. Drag points $A$ and $B$ in the Desmos activity below to explore this question. Try to reconcile what you see here with what the above algebra suggests.
+ 
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/cc7xl7pjad}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{cc7xl7pjad}{900}{600}
+\end{center}
+\end{onlineOnly}
+\end{exploration}
+
+\end{explanation}
+
+
+\begin{example}  \label{Ex8}
+Find an equation of the circle through the points $O(0,0)$, $A(a,b)$, and $C(c,d)$.
+
+\begin{exploration}\label{exp:circle8}
+(a) Correct the expressions for the coordinates $(x_1,y_1)$ of the circle's center in Lines 13 and 14 of the Desmos Activity below.
+
+(b) Correct the equation for the circle in Line 15.
+
+(c) Input equations for the 3 sets of points equidistant from the three pairs of points $O$, $A$, and $B$ in Lines 16-18.
+
+(d)  Drag points $A$ and $B$ in the Desmos activity below to explore when there is a unique circle through $O$, $A$, and $B$. Try to reconcile what you see here with what the above algebra suggests.
+
+ 
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/cpwwnom2sw}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{cpwwnom2sw}{900}{600}
+\end{center}
+\end{onlineOnly}
+\end{exploration}
+
+\end{example}
+
+
+
+\section{Surprising Circles}
+
+\begin{exercise}  
+  Is the point $(12,0)$ twice as far from $(8,0)$ as it is from $(20,0)$? 
+  \begin{multipleChoice}  
+    \choice{Yes}  
+    \choice[correct]{No}  
+        \end{multipleChoice}  
+\end{exercise}  
+
+
+
+\begin{example}
+(a) Is the point $Q(5,0)$ twice as far from $E(0,0)$ as it is from $F(15,0)$.
+
+(b) Find the coordinates of all points on the $y$-axis that are three times as far from the point $A(3,-2)$ as from the point $B(1,6)$. %Check your answer(s) by computing the appropriate distances.
+\end{example}
+
+\begin{explanation}
+(a) This is not really a math question, but an English question. Since
+\[
+    \text{dist}(Q,E) = 5
+\]
+and 
+\[
+    \text{dist}(Q,F) = 10  %= 2 \, \text{dist}(Q,E),
+\]
+$Q(5,0)$ is twice as far from $F(15,0)$ as it is from $E(0,0)$.
+
+\pskip
+
+{\bf Conclusion:} No, $Q(5,0)$ is {\bf not} twice as far from $E(0,0)$ as it is from $F(15,0)$. It's the other way around; $Q(5,0)$ is twice as far from $F(15,0)$ as it is from $E(0,0)$. 
+
+\pskip
+
+(b) Let $P$ be a point on the $y$-axis with coordinates $(0,y)$ that is three times as  from the point $A(3,-2)$ as it is from the point $B(1,6)$. Then
+\[
+    \text{dist}(A,P) = 3 \, \text{dist}(B,P) .
+\]
+Using the Pythagorean Theorem (or distance formula)
+\[
+    \text{dist}(A,P) = \sqrt{(0-3)^2 + (y+2)^2} = \sqrt{y^2 + 4y + 13}
+\]
+and
+\[
+    \text{dist}(B,P) = \sqrt{(0-1)^2 + (y-6)^2} = \sqrt{y^2-12y+37}.
+\]
+So $P(0,y)$ is  three times as  from $A(3,-2)$ as it is from $B(1,6)$ when
+\[
+   \sqrt{y^2 + 4y + 13} = 3 \sqrt{y^2-12y+37} .
+\]
+Squaring both sides gives
+\[
+  y^2 + 4y + 13 = 9(y^2-12y+37)
+\]
+and 
+\[
+        8y^2 - 112y +320 = 0 .
+\]
+So
+\[
+     y^2 - 14y + 40 = 0
+\]
+and
+\[
+     (y -4 )(y - 10) = 0.
+\]
+So
+\[
+     y-4 = 0    \;\;\;  \text{or} \;\;\; y-10=0
+\]
+and
+\[
+    y=4  \;\; \; \text{or} \;\;\ y=10 .
+\]
+
+\pskip
+
+{\bf Conclusion:} There are two points on the $y$-axis twice as far from $A(3,-2)$ as from $B(1,6)$. They have coordinates $(0,4)$ or $(0,10)$.
+
+\end{explanation}
+
+
+\begin{exercise}  
+  Which of the following points are twice as far from $(0,0)$ as from $(6,0)$? Check all that apply.  
+  \begin{selectAll}  
+    \choice{$(2,0)$}  
+    \choice[correct]{$(4,0)$}  
+    \choice[correct]{$(12,0)$} 
+    \choice{$(-6,0)$} 
+     \end{selectAll}  
+\end{exercise}  
+
+
+
+\begin{question} 
+Find an equation for the set of points twice as far from $(0,0)$ as from $(6,0)$. 
+\[
+  \answer{\sqrt{x^2+y^2} = 2 \sqrt{(x-6)^2+y^2}} 
+\]
+    \end{question}
+
+
+
+
+\begin{example}
+Show that the curve with equation
+\[
+   x^2  - 10x + y^2 + 7y = 5
+\]
+is a circle. Then determine the coordinates of its center and its radius.
+\end{example}
+
+
+\begin{explanation}
+We need to complete the square twice. The expression
+\[
+     x^2 - 10x
+\]
+is not a perfect square. But by adding the constant $(-10/2)^2 = (-5)^2 = 25$, we get a new expression that is a perfect square, namely,
+\[
+     x^2 -10x + (-5)^2 = (x-5)^2 .
+\]
+We can check this by distributing:
+\[
+    (x-5)^2 = (x-5)(x-5) = x^2 -5x -5x + 25 = x^2 - 10x + 25 .
+\]
+
+Similarly, the expression
+\[
+   y^2 + 7y
+\]
+is also not a perfect square. But by adding the constant $(7/2)^2 = 49/4$, we get a new expression that is a perfect square, namely
+\[
+     y^2 + 7y + (7/2)^2 = (y+7/2)^2 .
+\]
+
+Now let's write the equation of the curve as
+\[
+     (x^2  - 10x + \;\;\;\; ) + (y^2 + 7y + \;\;\;\; ) = 5 .
+\]
+We'll add $(-5)^2$ and $(7/2)^2$ to both sides, getting
+\[
+     (x^2  - 10x + (-5)^2 ) + (y^2 + 7y + (7/2)^2 ) = 5 + (-5)^2 + (7/2)^2 ,
+\]
+or
+\[
+    (x-5)^2 + (y+7/2)^2 = 5 + 25 + \frac{49}{4} = \frac{169}{4} .
+\]
+Taking the square root of both sides gives
+\[
+    \sqrt{(x-5)^2 + (y+7/2)^2} = 13/2 .
+\]
+The expression $\sqrt{(x-5)^2 + (y+7/2)^2}$ measures the distance from the point $P(x,y)$ to the point $A(5,-7/2)$. Since this distance is equal to the constant $13/2$, the graph of all points $P(x,y)$ whose coordinates satisfy the above equation is a circle with center $A(5,-7/2)$ and radius $13/2$.
+
+\pskip 
+
+{\bf Important Point:} Stick with fractions when completing the square. Do not use decimals.
+
+\end{explanation}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
